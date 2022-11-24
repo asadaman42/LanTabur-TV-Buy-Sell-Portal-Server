@@ -16,6 +16,15 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 
 const run = async () => {
     try{
+        const serviceCollection = client.db('LanTaburTv').collection('categories');
+        
+        app.get('/services', async (req, res) => {
+            const query = {};
+            const cursor = serviceCollection.find(query);
+            const services = await cursor.toArray();
+            res.send(services);
+
+
 
     }
 

@@ -1,12 +1,17 @@
 // required
 const express = require('express');
 const cors = require('cors');
+const corsOptions ={
+    origin:'*', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200,
+ }
+app.use(cors(corsOptions));
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 require('dotenv').config();
 // const jwt = require('jsonwebtoken');
 const app = express();
 const port = process.env.PORT || 5000;
-app.use(cors());
 app.use(express.json());
 
 const uri = `mongodb+srv://${process.env.LANTABUR_USER}:${process.env.LANTABUR_PASSWORD}@asadaman42.mzbtlu2.mongodb.net/?retryWrites=true&w=majority`;

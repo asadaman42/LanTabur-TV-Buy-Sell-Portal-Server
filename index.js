@@ -14,7 +14,7 @@ app.use(cors(corsOptions));
 const port = process.env.PORT || 5000;
 app.use(express.json());
 
-const uri = `mongodb+srv://${process.env.LANTABUR_USER}:${process.env.LANTABUR_PASSWORD}@asadaman42.mzbtlu2.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.LANTABUR_USER}:${process.env.LANTABUR_PASSWORD}@lantaburtvbuyandsellpor.1h9iyo0.mongodb.net/?retryWrites=true&w=majority`;
 
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });

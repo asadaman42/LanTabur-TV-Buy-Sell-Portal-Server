@@ -1,16 +1,16 @@
 // required
 const express = require('express');
 const cors = require('cors');
-const corsOptions = {
-    origin: '*',
-    credentials: true,            //access-control-allow-credentials:true
-    optionSuccessStatus: 200,
-}
+// const corsOptions = {
+//     origin: '*',
+//     credentials: true,            //access-control-allow-credentials:true
+//     optionSuccessStatus: 200,
+// }
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 require('dotenv').config();
 // const jwt = require('jsonwebtoken');
 const app = express();
-app.use(cors(corsOptions));
+app.use(cors());
 const port = process.env.PORT || 5000;
 app.use(express.json());
 
